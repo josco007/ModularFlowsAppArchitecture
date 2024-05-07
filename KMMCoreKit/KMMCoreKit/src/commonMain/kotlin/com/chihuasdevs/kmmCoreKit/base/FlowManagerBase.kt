@@ -32,7 +32,7 @@ open class FlowManagerBase : BusinessFlowsManagerDelegate {
 //        #endif
     }
 
-    fun actionForFlow(flow: Flow, action: FlowAction, animation: UIAnimation? = null, isDynamic: Boolean? = false, dynamicFlowId: String? = null): Pair<String?, BusinessBaseFlow?> {
+    open fun actionForFlow(flow: Flow, action: FlowAction, animation: UIAnimation? = null, isDynamic: Boolean? = false, dynamicFlowId: String? = null): Pair<String?, BusinessBaseFlow?> {
         val executeFlowResult = executeFlow(flow, action, animation, isDynamic, dynamicFlowId)
         return Pair(executeFlowResult.first, executeFlowResult.second?.getBusinessBaseFlow())
     }

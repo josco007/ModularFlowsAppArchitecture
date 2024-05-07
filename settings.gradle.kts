@@ -25,9 +25,13 @@ project(":KMMBusinessKit").projectDir = file("KMMBusinessKit/KMMBusinessKitShare
 include(":KMMRepositoryKit")
 project(":KMMRepositoryKit").projectDir = file("KMMRepositoryKit/KMMRepositoryKitShared")
 
+include(":KMPUnitTestKit")
+project(":KMPUnitTestKit").projectDir = file("KMPUnitTestKit/shared")
+
 include(":AndroidUI")
 project(":AndroidUI").projectDir = file("AndroidUI")
 
 include(":AndroidApp")
 project(":AndroidApp").projectDir = file("AndroidApp/app")
+
 

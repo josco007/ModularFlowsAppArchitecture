@@ -14,11 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMMBusinessKit"
-include(":KMMBusinessKitShared")
-
-include(":KMMCoreKit")
-project(":KMMCoreKit").projectDir = file("../KMMCoreKit/KMMCoreKit")
-
-include(":KMPUnitTestKit")
-project(":KMPUnitTestKit").projectDir = file("../KMPUnitTestKit/shared")
+rootProject.name = "KMPUnitTestKit"
+include(":shared")

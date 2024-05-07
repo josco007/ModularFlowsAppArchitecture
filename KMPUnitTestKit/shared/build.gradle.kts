@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
@@ -12,33 +14,31 @@ kotlin {
         }
     }
     
+    val xcf = XCFramework()
     listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "KMMBusinessKitShared"
+            baseName = "shared"
+            xcf.add(this)
             isStatic = true
         }
     }
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
             implementation(project(mapOf("path" to ":KMMCoreKit")))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
         }
         commonTest.dependencies {
-            implementation(project(mapOf("path" to ":KMMCoreKit")))
-            implementation(project(mapOf("path" to ":KMPUnitTestKit")))
             implementation(libs.kotlin.test)
         }
     }
 }
 
 android {
-    namespace = "com.chihuasdevs.kmmbusinesskit"
+    namespace = "com.chihuasdevs.kmpunittestkit"
     compileSdk = 34
     defaultConfig {
         minSdk = 28
