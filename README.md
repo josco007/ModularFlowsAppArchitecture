@@ -1,25 +1,23 @@
 ### ModularFlowsAppArchitecture
 
-**ModularFlowsAppArchitecture** is a robust architectural approach designed to create scalable, maintainable, and modular cross-platform applications. This README provides an in-depth explanation of the architecture's fundamental concepts, including modularization, dependency injection, flows-based navigation, and unit testing.
+**ModularFlowsAppArchitecture** is a comprehensive architectural approach designed to create scalable, maintainable, and modular cross-platform applications. This README provides an overview of the architecture's key concepts, emphasizing modularization, dependency injection, flows-based navigation, and unit testing. 
 
 #### 1. Modularization
 
-The architecture emphasizes modularization by dividing the application into distinct modules, each responsible for specific functionalities:
+The architecture organizes the application into distinct modules, each fulfilling specific roles:
 
-- **BusinessKit**: Contains business logic, domain-specific operations, and data processing.
-- **RepositoryKit**: Manages data access and storage, abstracting away data source details.
-- **CoreKit**: Provides essential utilities, helper functions, and common functionalities used across the application.
-- **UIKit**: Represents the user interface layer, comprising platform-specific implementations of Views, View Models, Themes, and UI Flows.
-- **UnitTestKit**: Facilitates unit testing by providing mock data, mock implementations of interfaces, and utilities for creating mock objects.
+- **BusinessKit**: Houses business logic, domain-specific operations, and data processing. Written in Kotlin Multiplatform, it can be shared across multiple platforms.
+- **RepositoryKit**: Manages data access and storage, abstracting away data source details. Also written in Kotlin Multiplatform, it provides a consistent interface for accessing data across platforms.
+- **CoreKit**: Offers essential utilities, helper functions, and common functionalities shared across the application. It's platform-agnostic and can be used in both native and multiplatform modules.
+- **UIKit**: Represents the user interface layer, containing platform-specific implementations of Views, View Models, Themes, and UI Flows. UIKit modules are native and tailored for each platform.
+- **UnitTestKit**: Facilitates unit testing with utilities for creating mock data, mock implementations of interfaces, and tools for testing both native and multiplatform modules.
 
 #### 2. Dependency Injection
 
-Dependency injection plays a crucial role in facilitating communication between modules and components. The architecture utilizes interfaces for seamless dependency injection, enabling loose coupling and flexibility:
+**ModularFlowsAppArchitecture** relies on interfaces for seamless dependency injection, fostering loose coupling and flexibility:
 
 - **UI Events Injection into Business Logic**: UI Events, such as user interactions, are injected into the Business Logic layer using interfaces, allowing it to respond to user actions independently of the UI layer.
-
 - **Business Logic Injection into UI**: Business Logic components are injected into the UI layer to handle business operations and data processing, ensuring separation of concerns and promoting modularity.
-
 - **Repository Injection into Business Logic**: Repositories, responsible for data access and management, are injected into the Business Logic layer, enabling it to interact with data sources without direct knowledge of their implementation details.
 
 #### 3. Flows-Based Navigation
@@ -27,9 +25,7 @@ Dependency injection plays a crucial role in facilitating communication between 
 Flows serve as the primary mechanism for managing navigation and data flow within the application:
 
 - **Injection of Dependencies**: Flows act as entry points for injecting dependencies, including UI Events, Business Logic, and Repositories, ensuring that each flow has access to the necessary components.
-
 - **Navigation Between Flows**: Flows facilitate seamless navigation between different parts of the application, enabling transitions between screens and triggering specific actions within the same flow.
-
 - **Flow Composition**: Flows can be composed of smaller sub-flows, allowing complex functionalities to be broken down into manageable units, promoting code reuse and simplifying maintenance.
 
 #### 4. Unit Testing
@@ -42,4 +38,4 @@ Flows serve as the primary mechanism for managing navigation and data flow withi
 
 #### Conclusion
 
-**ModularFlowsAppArchitecture** offers a comprehensive framework for building cross-platform applications with clear separation of concerns, flexible communication between modules, intuitive navigation flows, and robust unit testing capabilities. By leveraging modularization, dependency injection, flows-based navigation, and unit testing, developers can create applications that are scalable, maintainable, and adaptable to evolving requirements. This architecture promotes code reuse, simplifies maintenance, and enhances the overall development experience.
+**ModularFlowsAppArchitecture** offers a flexible and scalable framework for building cross-platform applications, leveraging Kotlin Multiplatform for shared business logic and data access while providing native implementations for platform-specific user interfaces and unit testing. This architecture promotes code reuse, simplifies maintenance, and enhances overall development efficiency.
