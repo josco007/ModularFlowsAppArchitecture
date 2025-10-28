@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
 }
 
 android {
@@ -30,9 +31,7 @@ android {
         viewBinding = true
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion= "1.5.5"
-    }
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

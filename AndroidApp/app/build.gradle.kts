@@ -1,11 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
 }
 
 android {
     namespace = "com.chihuasdevs.adroidapp"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.chihuasdevs.adroidapp"
@@ -40,9 +41,6 @@ android {
         dataBinding = true
         viewBinding = true
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion= "1.5.5"
     }
 
     packaging {
