@@ -3,8 +3,8 @@ package com.chihuasdevs.adroidapp.flowsManager.flows.appFlow
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import com.chihuasdevs.adroidapp.flowsManager.FlowsManager
-import com.chihuasdevs.androidui.AndroidUI
-import com.chihuasdevs.androidui.uiFlows.appFlow.UIAppFlow
+import com.chihuasdevs.cmpsharedui.CMPSharedUI
+import com.chihuasdevs.cmpsharedui.uiFlows.appFlow.UIAppFlow
 import com.chihuasdevs.kmmCoreKit.base.BaseFlow
 import com.chihuasdevs.kmmCoreKit.base.BusinessBaseFlow
 import kotlinx.coroutines.launch
@@ -28,7 +28,7 @@ class AppFlowManager(flowsManager: FlowsManager?) : BaseFlow() {
 
         uiAppFlow?.start(appUIEventsDelegate = null)
 
-        AndroidUI.setUIAppFLow(uiAppFlow = uiAppFlow)
+        CMPSharedUI.setUIAppFLow(uiAppFlow = uiAppFlow)
 
         // Iniciar el flujo empresarial de la aplicación con la pantalla de la interfaz de usuario de la aplicación
         //super.init()

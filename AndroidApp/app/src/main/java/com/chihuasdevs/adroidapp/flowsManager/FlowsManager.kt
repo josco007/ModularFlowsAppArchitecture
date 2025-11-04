@@ -9,7 +9,7 @@ import com.chihuasdevs.adroidapp.flowsManager.flows.registerFlow.RegisterFlowMan
 import com.chihuasdevs.adroidapp.flowsManager.flows.spaceXFlow.SpaceXFlowManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.splashFlow.SplashFlowManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.tabBarFlow.TabBarFlowManager
-import com.chihuasdevs.androidui.AndroidUI
+import com.chihuasdevs.cmpsharedui.CMPSharedUI
 import com.chihuasdevs.kmmCoreKit.base.BaseFlow
 import com.chihuasdevs.kmmCoreKit.base.FlowManagerBase
 import com.chihuasdevs.kmmCoreKit.enum.UIAnimation
@@ -26,7 +26,7 @@ class FlowsManager(context: Context) : FlowManagerBase() {
 
     init {
         //repositorySDK = RepositorySDK()
-        AndroidUI.initUIKit(themeConf = AndroidUI.ThemeConf(AndroidUI.ThemeConf.ThemeType.THEME1))
+        CMPSharedUI.initUIKit(themeConf = CMPSharedUI.ThemeConf(CMPSharedUI.ThemeConf.ThemeType.THEME1))
 
 //        businessKit = KMMBusinessKit(
 //            businessAppFlowDelegate = UISDK.getBusinessAppFlowDelegate(),

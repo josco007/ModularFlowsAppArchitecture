@@ -3,7 +3,7 @@ package com.chihuasdevs.adroidapp.flowsManager.flows.homeFlow
 import com.chihuasdevs.adroidapp.flowsManager.FlowsManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.appFlow.AppFlowManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.tabBarFlow.TabBarFlowManager
-import com.chihuasdevs.androidui.uiFlows.homeFlow.UIHomeFlow
+import com.chihuasdevs.cmpsharedui.uiFlows.homeFlow.UIHomeFlow
 import com.chihuasdevs.kmmCoreKit.base.BaseFlow
 import com.chihuasdevs.kmmCoreKit.base.FlowManagerBase
 import com.chihuasdevs.kmmCoreKit.enum.UIAnimation

@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AndroidApp/app" />
             <option value="$PROJECT_DIR$/AndroidUI" />
+            <option value="$PROJECT_DIR$/CMPSharedUI" />
             <option value="$PROJECT_DIR$/KMMBusinessKit/KMMBusinessKitShared" />
             <option value="$PROJECT_DIR$/KMMCoreKit/KMMCoreKit" />
             <option value="$PROJECT_DIR$/KMMRepositoryKit/KMMRepositoryKitShared" />

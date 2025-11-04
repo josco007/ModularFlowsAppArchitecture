@@ -1,7 +1,7 @@
 package com.chihuasdevs.adroidapp.flowsManager.flows.splashFlow
 
 import com.chihuasdevs.adroidapp.flowsManager.FlowsManager
-import com.chihuasdevs.androidui.uiFlows.splashFlow.UISplashFlow
+import com.chihuasdevs.cmpsharedui.uiFlows.splashFlow.UISplashFlow
 import com.chihuasdevs.kmmCoreKit.base.BaseFlow
 import com.chihuasdevs.kmmbusinesskit.flows.splashFlow.SplashBusinessFlow
 

@@ -68,7 +68,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation(project(mapOf("path" to ":AndroidUI")))
+    //implementation(project(mapOf("path" to ":AndroidUI")))
+    implementation(project(mapOf("path" to ":CMPSharedUI")))
     implementation(project(mapOf("path" to ":KMMCoreKit")))
     implementation(project(mapOf("path" to ":KMMBusinessKit")))
     implementation(project(mapOf("path" to ":KMMRepositoryKit")))

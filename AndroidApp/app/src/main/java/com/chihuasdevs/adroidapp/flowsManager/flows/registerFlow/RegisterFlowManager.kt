@@ -2,7 +2,7 @@ package com.chihuasdevs.adroidapp.flowsManager.flows.registerFlow
 
 import com.chihuasdevs.adroidapp.flowsManager.FlowsManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.appFlow.AppFlowManager
-import com.chihuasdevs.androidui.uiFlows.registerFlow.UIRegisterFlow
+import com.chihuasdevs.cmpsharedui.uiFlows.registerFlow.UIRegisterFlow
 import com.chihuasdevs.kmmCoreKit.base.BaseFlow
 import com.chihuasdevs.kmmCoreKit.base.FlowManagerBase
 import com.chihuasdevs.kmmCoreKit.enum.UIAnimation
