@@ -37,3 +37,6 @@ project(":AndroidApp").projectDir = file("AndroidApp/app")
 
 include(":CMPSharedUI")
 project(":CMPSharedUI").projectDir = file("CMPSharedUI")
+
+include(":KMPSharedAppKit")
+project(":KMPSharedAppKit").projectDir = file("KMPSharedAppKit")

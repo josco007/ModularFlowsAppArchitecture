@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/KMMBusinessKit/KMMBusinessKitShared" />
             <option value="$PROJECT_DIR$/KMMCoreKit/KMMCoreKit" />
             <option value="$PROJECT_DIR$/KMMRepositoryKit/KMMRepositoryKitShared" />
+            <option value="$PROJECT_DIR$/KMPSharedAppKit" />
             <option value="$PROJECT_DIR$/KMPUnitTestKit/shared" />
           </set>
         </option>
