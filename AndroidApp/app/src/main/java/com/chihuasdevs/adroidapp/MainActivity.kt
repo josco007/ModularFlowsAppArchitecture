@@ -8,9 +8,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import com.chihuasdevs.adroidapp.flowsManager.FlowsManager
 import com.chihuasdevs.adroidapp.flowsManager.flows.appFlow.AppFlowManager
 import com.chihuasdevs.kmmCoreKit.base.FlowManagerBase
+import com.chihuasdevs.kmmflowskit.FlowsManager
+import com.chihuasdevs.kmmrepositorykit.shared.cache.DatabaseDriverFactory
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun SplashView() {
-    var flowsManager = FlowsManager(LocalContext.current)
+    var flowsManager = FlowsManager(DatabaseDriverFactory(LocalContext.current))
     flowsManager.actionForFlow(FlowManagerBase.Flow.APP, FlowManagerBase.FlowAction.START)
     (flowsManager.getFlow(FlowManagerBase.Flow.APP, false, null) as? AppFlowManager)?.
     getUIAppFlow()?.
@@ -50,7 +51,7 @@ fun SplashView() {
 @Composable
 fun GreetingPreview() {
 
-    var flowsManager = FlowsManager(LocalContext.current)
+    var flowsManager = FlowsManager(DatabaseDriverFactory(LocalContext.current))
     flowsManager.actionForFlow(FlowManagerBase.Flow.APP, FlowManagerBase.FlowAction.START)
     (flowsManager.getFlow(FlowManagerBase.Flow.APP, false, null) as? AppFlowManager)?.
     getUIAppFlow()?.

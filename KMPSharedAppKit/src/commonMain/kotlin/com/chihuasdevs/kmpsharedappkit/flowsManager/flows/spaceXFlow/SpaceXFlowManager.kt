@@ -31,7 +31,7 @@ class SpaceXFlowManager(flowsManager: FlowsManager?, animation: UIAnimation?) : 
         businessSpaceXFlow.start(flowsManager?.businessKit,
             (flowsManager?.getFlow(FlowManagerBase.Flow.APP, null , null) as AppFlowManager).getUIAppFlow()?.getBusinessAppViewDelegate(),
             businessSpaceXDelegate = uiSpaceXFlow.getBusinessSpaceXDelegate(),
-            spacexWebservicesDelegate = flowsManager?.repositorySDK?.getSpaceXWS())
+            spacexWebservicesDelegate = flowsManager.repositoryKit?.getSpaceXWS())
 
     }
 

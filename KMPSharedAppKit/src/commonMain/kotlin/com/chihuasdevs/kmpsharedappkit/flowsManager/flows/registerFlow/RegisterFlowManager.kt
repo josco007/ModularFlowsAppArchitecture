@@ -39,7 +39,7 @@ class RegisterFlowManager(flowsManager: FlowsManager?, animation: UIAnimation?) 
             uiRegisterFlow?.getBusinessUserInfoDelegate(),
             uiRegisterFlow?.getBusinessPasswordDelegate(),
             uiRegisterFlow?.getBusinessVerificationCodeDelegate(),
-            flowsManager?.repositorySDK?.getOtpWS())
+            flowsManager?.repositoryKit?.getOtpWS())
 
     }
 
