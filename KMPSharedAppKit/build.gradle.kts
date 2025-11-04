@@ -25,6 +25,9 @@ kotlin {
         commonMain.dependencies {
             //put your multiplatform dependencies here
             implementation(project(mapOf("path" to ":KMMCoreKit")))
+            implementation(project(mapOf("path" to ":CMPSharedUI")))
+            implementation(project(mapOf("path" to ":KMMBusinessKit")))
+            implementation(project(mapOf("path" to ":KMMRepositoryKit")))
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
         }
         commonTest.dependencies {
